@@ -64,17 +64,14 @@ footer {
     height: 100%;
     background-color: white;
     padding: 20px;
-    transition: transform 0.3s ease, visibility 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.3s ease;
     z-index: 500;
     box-shadow: none;
-    visibility: hidden;
-    opacity: 0;
+    overflow: hidden;
 }
 
 .sidebar.open {
     transform: translateX(0);
-    visibility: visible;
-    opacity: 1;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
     z-index: 1001;
 }
@@ -92,8 +89,9 @@ footer {
     display: flex;
     align-items: center;
     gap: 10px;
-    flex-wrap: wrap;
-    word-break: break-word;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 #close-sidebar {
