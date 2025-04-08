@@ -61,6 +61,7 @@ footer {
     left: 0;
     transform: translateX(-100%);
     width: 250px;
+    max-width: 90vw;
     height: 100%;
     background-color: white;
     padding: 20px;
@@ -119,10 +120,6 @@ header.dark-mode {
 @media (max-width: 768px) {
     main {
         padding-bottom: 120px;
-    }
-
-    .sidebar {
-        width: 90vw;
     }
 
     .sidebar ul li {
