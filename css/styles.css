@@ -114,4 +114,7 @@ header.dark-mode {
     main {
         padding-bottom: 120px;
     }
+    .sidebar{
+        font-size: 12px;
+    }
 }
