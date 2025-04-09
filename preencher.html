@@ -7,9 +7,18 @@
     <title>Preencher manualmente</title>
     <link rel="stylesheet" href="css/preencher.css">
     <script src="js/preencher.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 
 <body>
+    <header class="top-bar">
+        <span class="material-symbols-outlined" onclick="history.back()">arrow_back</span>
+        <h1>Confirmar Infração</h1>
+        <span id="modo-escuro" class="material-symbols-outlined">dark_mode</span>
+    </header>
+
+    <div class="spacer"></div>
+
     <h2>Preencher Manualmente</h2>
     <form>
         <p>Dados do agente</p>
@@ -128,11 +137,15 @@
             <label for="multa">Valor da multa</label>
             <input type="number" name="multa">
 
-            <label for="registro">houve registro fotográfico?</label>
-            <input type="radio" id="foto" value="sim" name="registro">
-            <label for="sim">sim</label>
-            <input type="radio" id="foto" value="nao" name="registro">
-            <label for="nao">não</label>
+            <label for="registro">Houve registro fotográfico?</label>
+            <div class="registro">
+                <input type="radio" id="foto-sim" value="sim" name="registro">
+                <label for="foto-sim">Sim</label>
+
+                <input type="radio" id="foto-nao" value="nao" name="registro">
+                <label for="foto-nao">Não</label>
+            </div>
+
         </div>
 
         <hr>
@@ -193,7 +206,7 @@
             <label for="nao">Eu me responsabilizo pelas informações inseridas no formulário e estou ciente das
                 implicações legais do registro de infrações.</label>
         </div>
-
+        
         <input type="submit" value="Confirmar">
 
     </form>
