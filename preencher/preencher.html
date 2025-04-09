@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preencher manualmente</title>
+    <link rel="stylesheet" href="css/preencher.css">
+    <script src="js/preencher.js" defer></script>
+</head>
+
+<body>
+    <h2>Preencher Manualmente</h2>
+    <form>
+        <p>Dados do agente</p>
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome">
+            <label for="sobrenome">Sobrenome:</label>
+            <input type="text" name="sobrenome">
+        </div>
+
+        <div>
+            <label for="age">Orgão responsável:</label>
+            <input type="text">
+        </div>
+
+        <div>
+            <label for="date">Data e hora do registro</label>
+            <input type="date" name="date">
+            <input type="time" name="hora">
+        </div>
+
+        <hr>
+
+        <div>
+            <p>Identificação do veiculo</p>
+            <label for="placa" required>Placa:</label>
+            <input type="text" name="placa">
+            <label for="modelo">Marca/Modelo:</label>
+            <input type="text" name="modelo">
+            <label for="cor">Cor:</label>
+            <input type="text" name="cor">
+        </div>
+
+        <div>
+            <label for="categoria">Categoria</label>
+            <div class="categoria">
+                <input type="radio" id="Particular" value="Particular" name="categoria">
+                <label for="Particular">Particular</label>
+            </div>
+
+            <div class="categoria">
+                <input type="radio" id="Comercial" value="Comercial" name="categoria">
+                <label for="Comercial">Comercial</label>
+            </div>
+
+            <div class="categoria">
+                <input type="radio" id="Oficial" value="Oficial" name="categoria">
+                <label for="Oficial">Oficial</label>
+            </div>
+
+            <div class="categoria">
+                <input type="radio" id="Outros" value="Outros" name="categoria">
+                <label for="Outros">Outros</label>
+            </div>
+        </div>
+
+
+        <div>
+            <label for="tipo_veiculo">Tipo do veículo</label>
+            <div class="tipo">
+                <input type="radio" id="Moto" value="Moto" name="tipo_veiculo">
+                <label for="Moto">Moto</label>
+            </div>
+
+            <div class="tipo">
+                <input type="radio" id="Carro" value="Carro" name="tipo_veiculo">
+                <label for="Carro">Carro</label>
+            </div>
+
+            <div class="tipo">
+                <input type="radio" id="Comercial" value="Comercial" name="tipo_veiculo">
+                <label for="Comercial">Comercial</label>
+            </div>
+
+            <div class="tipo">
+                <input type="radio" id="Oficial" value="Oficial" name="tipo_veiculo">
+                <label for="Oficial">Oficial</label>
+            </div>
+
+            <div class="tipo">
+                <input type="radio" id="Outros" value="Outros" name="tipo_veiculo">
+                <label for="Outros">Outros</label>
+            </div>
+        </div>
+
+        <div>
+            <label for="rua">Endereço</label>
+            <input type="text" name="rua">
+            <label for="cidade">Cidade</label>
+            <input type="text" name="cidade">
+            <label for="referencia">Referencias</label>
+            <input type="text" name="referencia">
+        </div>
+
+        <hr>
+
+        <p>Infração Cometida</p>
+        <label for="infracao">Código da infração</label>
+        <input type="number" name="infracao">
+
+
+        <div>
+            <label for="descricao">Descrição da infração</label>
+            <input type="text" name="descricao">
+        </div>
+
+        <div>
+            <p>Artigo do CTB</p>
+            <label for="artigo">Artigo</label>
+            <input type="number" name="artigo">
+            <label for="inciso">Inciso</label>
+            <input type="text" name="inciso">
+        </div>
+
+        <div>
+            <label for="multa">Valor da multa</label>
+            <input type="number" name="multa">
+
+            <label for="registro">houve registro fotográfico?</label>
+            <input type="radio" id="foto" value="sim" name="registro">
+            <label for="sim">sim</label>
+            <input type="radio" id="foto" value="nao" name="registro">
+            <label for="nao">não</label>
+        </div>
+
+        <hr>
+
+        <div>
+            <p>Identificação de condutor(se aplicável)</p>
+            <div>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome">
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" name="sobrenome">
+            </div>
+
+            <div>
+                <label for="cpf">CPF</label>
+                <input type="number" name="cpf">
+                <label for="cnh">CNH</label>
+                <input type="number" name="cnh">
+            </div>
+
+            <div>
+                <label for="date">Data e hora do registro</label>
+                <input type="date" name="date">
+                <input type="time" name="hora">
+                <label for="categoria">Categoria</label>
+                <input type="text" name="categoria">
+            </div>
+
+        </div>
+
+        <div>
+            <label for="adicionais">Informações adicionais:</label>
+            <textarea name="adicionais"></textarea>
+        </div>
+
+        <h3>Confirmação</h3>
+
+        <label for="assinaturaAgente">Assinatura do agente</label>
+        <canvas id="assinaturaAgente" width="300" height="100"
+            style="border: 1px solid #ccc; background-color: #fff; border-radius: 8px;"></canvas>
+        <button type="button" onclick="limparCanvas('assinaturaAgente')">Limpar</button>
+
+
+        <label for="assinaturaCondutor">Assinatura do condutor</label>
+        <canvas id="assinaturaCondutor" width="300" height="100"
+            style="border: 1px solid #ccc; background-color: #fff; border-radius: 8px;"></canvas>
+        <button type="button" onclick="limparCanvas('assinaturaCondutor')">Limpar</button>
+
+
+        <div>
+            <input type="radio" id="confirmação" value="confirmar">
+            <label for="nao">Eu, como agente de trânsito, confirmo que as informações aqui registradas são verdadeiras e
+                de acordo com o Código de Trânsito Brasileiro.</label>
+        </div>
+
+        <div>
+            <input type="radio" id="confirmação" value="confirmar">
+            <label for="nao">Eu me responsabilizo pelas informações inseridas no formulário e estou ciente das
+                implicações legais do registro de infrações.</label>
+        </div>
+
+        <input type="submit" value="Confirmar">
+
+    </form>
+</body>
+
+</html>
