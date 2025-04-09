@@ -18,6 +18,13 @@ function assinaturaCanvas(id) {
         };
     }
 
+    function desenhar(x, y) {
+        ctx.fillStyle = "black";
+        ctx.beginPath();
+        ctx.arc(x, y, 1.5, 0, 2 * Math.PI);
+        ctx.fill();
+    }
+
 
     canvas.addEventListener("mousedown", () => desenhando = true);
     canvas.addEventListener("mouseup", () => desenhando = false);
@@ -43,12 +50,7 @@ function assinaturaCanvas(id) {
         e.preventDefault(); 
     });
 
-    function desenhar(x, y) {
-        ctx.fillStyle = "black";
-        ctx.beginPath();
-        ctx.arc(x, y, 1.5, 0, 2 * Math.PI);
-        ctx.fill();
-    }
+    
 }
 
 function limparCanvas(id) {
